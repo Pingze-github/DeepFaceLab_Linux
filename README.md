@@ -6,9 +6,9 @@ To download the installer, follow this link and download the Anaconda platform f
 [https://www.anaconda.com/distribution/#linux](https://www.anaconda.com/distribution/#linux). 
 
 这里直接下载Python3.6对应的anaconda3版本。anaconda历史版本在：https://repo.anaconda.com/archive/
-其中Anaconda3-5.2.0-XXX提供Python3.6。
+其中Anaconda3-5.2.0-XXX提供Python3.6.5。
 
-后续创建conda环境时，不再需要重新指定版本安装python3.6。
+后续创建conda环境时，不再需要重新指定版本安装python3.6。（最高支持到3.6.5，如果更高不能用此法）
 
 After installing the platform, you might need to add conda command into your path for further usage of the platform. You can do this with the following commands.
 ```bash
@@ -38,9 +38,13 @@ python -m pip install -r ./DeepFaceLab/requirements-cuda.txt
 
 上面命令会从官方源下载python，可能极其缓慢。可以在配置国内源后考虑用下面的命令。使用python3.7也可以
 ``` bash
-conda create -n deepfacelab
-conda install cudnn=7.6.5 cudatoolkit=10.0
-# 只指定大版本，保证第三方源有包
+# 离线创建空环境
+conda create -n deepfacelab --offline
+conda activate deepfacelab
+# 离线安装python3.6.8相关包
+conda install conda-pkgs/*.tar.bz2
+# 安装cuda相关包
+conda install cudnn=7.6.5 cudatoolkit=10.0.130
 ```
 
 ## 4. Download CelebA Dataset
