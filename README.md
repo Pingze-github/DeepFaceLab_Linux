@@ -50,3 +50,5 @@ Finally, you will need to use the provided datasets required for DeepFaceLab tra
 
 ## 5. Navigate to the scripts directory and begin using DeepFaceLab_Linux :)
 
+如果conda环境中python不是3.6版本，需要更改env.sh中`export DFL_PYTHON="python3.6"`为`python`或指定版本的命令符。
+
