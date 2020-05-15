@@ -31,6 +31,13 @@ git clone https://github.com/iperov/DeepFaceLab.git
 python -m pip install -r ./DeepFaceLab/requirements-cuda.txt
 ```
 
+上面命令会从官方源下载python，可能极其缓慢。可以在配置国内源后考虑用下面的命令。使用python3.7也可以
+``` bash
+conda create -n deepfacelab
+conda install cudnn=7.6.5 cudatoolkit=10.0
+# 只指定大版本，保证第三房源有包
+```
+
 ## 4. Download CelebA Dataset
 
 Finally, you will need to use the provided datasets required for DeepFaceLab training. 
@@ -38,6 +45,8 @@ Finally, you will need to use the provided datasets required for DeepFaceLab tra
 1. Download the latest NVIDIA build from the main repository for Windows. [https://drive.google.com/drive/folders/17a9b9zmLdnAlItifcGSE9ixDIDAT3YxP](https://drive.google.com/drive/folders/17a9b9zmLdnAlItifcGSE9ixDIDAT3YxP)
 2. Extract the build and go into the _internal folder. ``7z x DeepFaceLab_NVIDIA_build_XX_XX_XXX.exe``
 3. Copy both pretrain_CelebA and pretrain_Quick96 to the directory DeepFaceLab_Linux/
+
+注：这里就是从主仓库windows安装版包中获取两个模型相关文件。
 
 ## 5. Navigate to the scripts directory and begin using DeepFaceLab_Linux :)
 
