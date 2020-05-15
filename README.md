@@ -5,6 +5,11 @@ Anaconda is the preferred method of installing DeepFaceLab on Linux. Anaconda is
 To download the installer, follow this link and download the Anaconda platform for Linux x64.
 [https://www.anaconda.com/distribution/#linux](https://www.anaconda.com/distribution/#linux). 
 
+这里直接下载Python3.6对应的anaconda3版本。anaconda历史版本在：https://repo.anaconda.com/archive/
+其中Anaconda3-5.2.0-XXX提供Python3.6。
+
+后续创建conda环境时，不再需要重新指定版本安装python3.6。
+
 After installing the platform, you might need to add conda command into your path for further usage of the platform. You can do this with the following commands.
 ```bash
 export PATH=~/anaconda3/bin:$PATH
