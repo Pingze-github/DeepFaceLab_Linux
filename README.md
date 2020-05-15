@@ -35,7 +35,7 @@ python -m pip install -r ./DeepFaceLab/requirements-cuda.txt
 ``` bash
 conda create -n deepfacelab
 conda install cudnn=7.6.5 cudatoolkit=10.0
-# 只指定大版本，保证第三房源有包
+# 只指定大版本，保证第三方源有包
 ```
 
 ## 4. Download CelebA Dataset
